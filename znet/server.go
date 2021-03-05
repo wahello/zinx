@@ -23,8 +23,6 @@ var bottomLine = `└───────────────────�
 
 //Server 接口实现，定义一个Server服务类
 type Server struct {
-	
-	Config ZConfig
 
 	//服务器的名称
 	Name string
