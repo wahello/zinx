@@ -1,6 +1,9 @@
 package ziface
 
-import "net"
+import (
+	"context"
+	"net"
+)
 
 //定义连接接口
 type IConnection interface {
@@ -8,7 +11,8 @@ type IConnection interface {
 	Start()
 	//停止连接，结束当前连接状态M
 	Stop()
-
+	//返回ctx，用于用户自定义的go程获取连接退出状态
+	Context() context.Context
 	//从当前连接获取原始的socket TCPConn
 	GetTCPConnection() *net.TCPConn
 	//获取当前连接ID
@@ -17,9 +21,9 @@ type IConnection interface {
 	RemoteAddr() net.Addr
 
 	//直接将Message数据发送数据给远程的TCP客户端(无缓冲)
-	SendMsg(msgId uint32, data []byte) error
+	SendMsg(msgID uint32, data []byte) error
 	//直接将Message数据发送给远程的TCP客户端(有缓冲)
-	SendBuffMsg(msgId uint32, data []byte) error
+	SendBuffMsg(msgID uint32, data []byte) error
 
 	//设置链接属性
 	SetProperty(key string, value interface{})
