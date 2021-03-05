@@ -1,0 +1,23 @@
+2021/02/23 11:03:04 [DEBUG]main.go:19: DoConnecionBegin is Called ... 
+2021/02/23 11:03:04 [DEBUG]main.go:22: Set conn Name, Home done!
+2021/02/23 11:03:04 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:04 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:05 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:05 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:06 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:06 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:07 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:07 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:08 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:08 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:09 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:09 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:10 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:10 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:11 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:11 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:12 [DEBUG]ping.go:17: Call PingRouter Handle
+2021/02/23 11:03:12 [DEBUG]ping.go:19: recv from client : msgId= 0 , data= Zinx client Demo Test MsgID=0, [Ping]
+2021/02/23 11:03:13 [ERROR]main.go:36: Conn Property Name =  Aceld
+2021/02/23 11:03:13 [ERROR]main.go:40: Conn Property Home =  https://www.jianshu.com/u/35261429b7f1
+2021/02/23 11:03:13 [DEBUG]main.go:43: DoConneciotnLost is Called ... 

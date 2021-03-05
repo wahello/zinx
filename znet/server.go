@@ -20,8 +20,31 @@ var topLine = `┌────────────────────�
 var borderLine = `│`
 var bottomLine = `└───────────────────────────────────────────────────┘`
 
+type ZConfig struct {
+	/*
+		Server
+	*/
+	Name string
+	TcpVersion string
+	Ip: string
+	Port int
+
+	/*
+		Zinx
+	*/
+	MaxPacketSize    uint32 //都需数据包的最大值
+	MaxConn          int    //当前服务器主机允许的最大链接个数
+	WorkerPoolSize   uint32 //业务工作Worker池的数量
+	MaxWorkerTaskLen uint32 //业务工作Worker对应负责的任务队列最大任务存储数量
+	MaxMsgChanLen    uint32 //SendBuffMsg发送消息的缓冲最大长度
+
+}
+
 //iServer 接口实现，定义一个Server服务类
 type Server struct {
+	
+	Config ZConfig
+
 	//服务器的名称
 	Name string
 	//tcp4 or other
@@ -43,14 +66,15 @@ type Server struct {
 /*
   创建一个服务器句柄
 */
-func NewServer() ziface.IServer {
+func NewServer(conf *ZConfig) ziface.IServer {
 	printLogo()
 
 	s := &Server{
-		Name:       utils.GlobalObject.Name,
-		IPVersion:  "tcp4",
-		IP:         utils.GlobalObject.Host,
-		Port:       utils.GlobalObject.TcpPort,
+		Config: conf,
+		Name:       conf.Name,
+		IPVersion:  conf.TcpVersion,
+		IP:         conf.Ip,
+		Port:       conf.Port,
 		msgHandler: NewMsgHandle(),
 		ConnMgr:    NewConnManager(),
 	}
