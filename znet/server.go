@@ -5,6 +5,7 @@ import (
 	"net"
 
 	"github.com/aceld/zinx/utils"
+	"github.com/aceld/zinx/version"
 	"github.com/aceld/zinx/ziface"
 )
 
@@ -176,7 +177,7 @@ func printLogo() {
 	fmt.Println(fmt.Sprintf("%s [tutorial] https://www.kancloud.cn/aceld/zinx     %s", borderLine, borderLine))
 	fmt.Println(bottomLine)
 	fmt.Printf("[Zinx] Version: %s, MaxConn: %d, MaxPacketSize: %d\n",
-		utils.GlobalObject.Version,
+		version.Version,
 		utils.GlobalObject.MaxConn,
 		utils.GlobalObject.MaxPacketSize)
 }
